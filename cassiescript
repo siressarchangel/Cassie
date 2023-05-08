@@ -1,0 +1,9 @@
+# Set the URL of the file you want to download
+$fileUrl = "https://github.com/siressarchangel/Cassie/raw/main/CassieUserStation_Win_4_2_3_64bit.msi"
+$user = $env:USERNAME
+
+# Set the destination path for the downloaded file
+$destinationPath = "c:\users\$user\downloads\CassieUserStation_Win_4_2_3_64bit.msi"
+
+# Download the file using Invoke-WebRequest
+Invoke-WebRequest -Uri $fileUrl -OutFile $destinationPath
